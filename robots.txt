@@ -1,0 +1,3 @@
+User-Agent: Googlebot
+Disallow: /nogooglebot
+Sitemap: https://ihomecancun.com/sitemap.xml

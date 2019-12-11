@@ -1,0 +1,80 @@
+<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<!--<ul class="carousel-indicators">
+									<li data-target="#myCarousel" data-slide-to="0" class="active" style="color:#DFBA49; ">
+										<img style="heigth:50px;width:50px;" :src=photos[0] alt="">
+									</li>
+									<li v-for="i in photos.length-1" :key="i" data-target="#myCarousel" :data-slide-to="i" style="color:#DFBA49; ">
+										<img style="heigth:50px;width:50px;" :src=photos[i] alt="">
+									</li>
+								</ul>-->
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner">
+									<div  class="item active image-slider-contain" >
+										<img :src=photos[0] :alt="property.propiedad">
+									</div>
+
+									<div v-for="(n,i) in photos" :index="i" :key="n" v-if="i>0" class="item image-slider-contain "  >
+										<img :src=photos[i] :alt="property.propiedad">
+										
+									</div>
+								</div>
+
+								<!-- Left and right controls -->
+																
+								<!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+									<span class="sr-only">Previous</span>
+										
+								</a>
+							
+								
+								<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+									<span class="sr-only">Next</span>
+								</a>-->
+							</div>
+
+							<br>
+							<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
+							<div id="myCarousell" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ul class="carousel-indicators">
+									<li data-target="#myCarousell" data-slide-to="0" class="active" style="color:#DFBA49; ">
+										<!--<img style="heigth:50px;width:50px;" :src=photos[0] alt="">-->
+									</li>
+									<li v-for="i in photos.length-1" :key="i" data-target="#myCarousell" :data-slide-to="i" style="color:#DFBA49; ">
+										<!--<img style="heigth:50px;width:50px;" :src=photos[i] alt="">-->
+									</li>
+								</ul>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner">
+									<div  class="item active image-slider-contain images-carousell" >
+										<div class="row">
+											<div class="col-sm-3"> </div>
+											<div class="col-sm-3"><a href="#myCarousel" data-target="#myCarousel" data-slide-to="0"><img :src=photos[0] :alt="property.propiedad"></a></div>
+											<div class="col-sm-3"><a href="#myCarousel" data-target="#myCarousel" data-slide-to="1"><img :src=photos[1] :alt="property.propiedad"></a></div>
+											<div class="col-sm-3"><a href="#myCarousel" data-target="#myCarousel" data-slide-to="2"><img :src=photos[2] :alt="property.propiedad"></a></div>
+											<div class="col-sm-3"><a href="#myCarousel" data-target="#myCarousel" data-slide-to="3"><img :src=photos[3] :alt="property.propiedad"></a></div>
+										</div>
+									</div>
+
+									<div v-for="(n,i) in photos" :index="i" :key="n" v-if="i>0" class="item image-slider-contain images-carousell"  >
+										<a href="#myCarousel" data-target="#myCarousel" :data-slide-to="i">	<img :src=photos[i] :alt="property.propiedad"></a>
+										
+									</div>
+								</div>
+
+								<!-- Left and right controls
+								<a class="left carousel-control" href="#myCarousell" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#myCarousell" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+									<span class="sr-only">Next</span>
+								</a> -->
+							</div>

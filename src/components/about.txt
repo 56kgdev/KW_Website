@@ -1,0 +1,171 @@
+<template>
+	<main>
+
+		<!-- START SECTION TOP -->
+		<div class="parallax colored-bg pattern-bg" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="page-title">Nosotros</h1>
+						
+						<ul class="breadcrumb">
+							<li><a href="/">Inicio </a></li>
+							<li><b>Nosotros</b></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- END SECTION TOP -->
+
+		<!-- START ABOUT US -->	
+		<section id="about" class="about-us section-padding">
+			<div class="container" style="text-align:justify;">
+				<div class="row">	
+					<div class="section-title text-center wow zoomIn">
+						<h2>Identidad corporativa M & C Soluciones Inmobiliarias</h2>
+						<div></div>
+					</div>					
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="about-us-content">
+							<h2>Misión</h2>
+							<p>Encontrar las mejores soluciones en materia de bienes raices para satisfacer las necesidades de nuestros clientes tanto para la adquisición como para la venta de propiedades cuidando sus intereses, asegurando la confianza y seguridad mediante un trato personalizado.</p>							
+						</div>
+						<div class="about-us-content">
+							<h2>Visión</h2>
+							<p>Ser líder en el mercado inmobiliario de lujo reconocía por la aplicación de valores fundamentales que definen nuestra práctica profesional.</p>
+						</div>
+						<div class="about-us-content">
+							<h2>Valores</h2>
+							<!--<p>Ser líder en el mercado inmobiliario de lujo reconocía por la aplicación de valores fundamentales que definen nuestra práctica profesional.</p>-->
+							<ul>
+								<li><i class="fa fa-check"></i><strong>Respeto:</strong>  Tratar a todos con dignidad, valorar sus contribuciones y apoyarnos unos a otros para tener éxito.</li>
+								<li><i class="fa fa-check"></i><strong>Integridad:</strong>  Ética profesional impecable en nuestras prácticas de negocios.</li>
+								<li><i class="fa fa-check"></i><strong>Servicio Esmerado:</strong>  Nos comprometemos a ofrecer una experiencia excepcional que impacte en positivo a nuestros clientes y comunidad.</li>
+								<li><i class="fa fa-check"></i><strong>Excelencia:</strong> Aspirar a ser los mejores en todo lo que hacemos y nos esforzamos por la mejora continua.</li>
+								<li><i class="fa fa-check"></i><strong>Dinamismo:</strong> Actitud positiva, productividad y velocidad de respuesta.</li>
+							</ul>
+						</div>
+						<br>
+						<br>
+						<div class="about-us-content">
+							<h2>Acerca de M & C Soluciones Inmobiliarias</h2>
+							<p>La dirección de M & C Soluciones Inmobiliarias, es ejercida por Sueyin Agelvis Acuña es un asesor inmobiliario profesional inmobiliario proactiva, dinámica y comprometida, reconocida por su organización, persistencia, creatividad y capacidad de trabajar por objetivos así como para motivar e impulsar al equipo de ventas, mediante el desarrollo de sus habilidades para alcanzar las metas. La preparación profesional es acreditada por el Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER) con competencia para la asesoría en la comercialización de bienes inmuebles, agente certificado INFONAVIT, con matrícula AEAS7509055L3FS005000145 como asesor inmobiliario acreditado en Quintana Roo y con Título como Técnico Superior Universitario en Comercialización Inmobiliaria emitido por la Secretaria de Educación Pública y como corredor inmobiliario certificado por Cámara Inmobiliaria de Venezuela.</p>
+						</div>
+						<hr>		
+						<div class="about_img" align="left" style="display:inline-block;">
+							<div style="width:100%">
+					  			<img src="src/assets/img/Foto redes.jpg" class="img-responsive" alt=""  />
+							</div>
+						</div>	
+						<hr>			
+					</div><!-- END COL -->
+					<div class="col-md-6 col-sm-12 col-xs-12" >
+						<br>
+						<div class="about-us-content">
+							<h2>Servicios</h2>
+							<!--<p>Ser líder en el mercado inmobiliario de lujo reconocía por la aplicación de valores fundamentales que definen nuestra práctica profesional.</p>-->
+							<ul>
+								<li><i class="fa fa-check"></i><strong>Corretaje inmobiliario</strong></li>
+								<li><i class="fa fa-check"></i><strong>Administracion de propiedades</strong></li>
+								<li><i class="fa fa-check"></i><strong>Gestoría de Créditos hipotecarios.</strong></li>
+								<li><i class="fa fa-check"></i><strong>Representación legal</strong></li>
+								<li><i class="fa fa-check"></i><strong>Búsqueda de propiedades</strong></li>
+								<li><i class="fa fa-check"></i><strong>Identificación de oportunidades de inversión</strong></li>
+								<li><i class="fa fa-check"></i><strong>Estudios de mercado</strong></li>
+								<li><i class="fa fa-check"></i><strong>Valuación de inmueble</strong></li>
+								<li><i class="fa fa-check"></i><strong>Mercadeo y venta de bienes raices</strong></li>
+								<li><i class="fa fa-check"></i><strong>Contratos Escrow</strong></li>
+							</ul>
+						</div>
+						<div class="about-us-content">
+							<h2>Venda su propiedad con nosotros</h2>
+							<p>Contratar con M & C Soluciones Inmobiliarias le permitirá sentir la seguridad de contar con un asesor a su servicio para darle respuesta oportuna, crear un plan de comercialización acorde el tipo de propiedad que desea vender, tomando en cuenta las vías de marketing mas convenientes como: anuncios, folletos, relaciones públicas, redes sociales, mercado on line, entre otros. Así, aplicar en forma sistemática el plan de medios con el personal especializado será la clave del éxito, es decir, lograr la venta en el tiempo acordado por contrato.</p>
+						</div>
+						<div class="about-us-content">
+							<h2>Compre su propiedad con nosotros</h2>
+							<p>Nuestra comunicación es personal y a través de las tecnologías como redes sociales para lograr la correcta difusión y promoción de nuestro portafolio de bienes raices. Participamos activamente en la red inmobiliaria local y nacional.</p>
+							<p>Nuestro portafolio es cuidadosamente seleccionado y soportado mediante la documentación  que la acreditan legítima para brindarle la tranquilidad en el proceso. Para esto, M & C Soluciones Inmobiliarias, es el primer filtro de revisión para posteriormente entregar a la notaria de su elección y cerrar exitosamente la operación.</p>
+						</div>
+						<hr>
+						<div class="about_img" style="widht:100%;display:inline-block;aling-items: center;" align="center">											
+							<div id="carouselCompany" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin:auto;">
+								<div align="center" class="carousel-inner text-center"  style="width:400px; height:550px;">
+									<ol class="carousel-indicators carousel-indicators-slider" style="margin-bottom:-30px;">
+										<li data-target="#carouselCompany" data-slide-to="0" class="active"></li>
+										<li data-target="#carouselCompany" data-slide-to="1" class="active"></li>
+										<li data-target="#carouselCompany" data-slide-to="2" class="active"></li>
+										<li data-target="#carouselCompany" data-slide-to="3" class="active"></li>
+										<li data-target="#carouselCompany" data-slide-to="4" class="active"></li>
+										<li data-target="#carouselCompany" data-slide-to="5" class="active"></li>
+									</ol>
+									<!-- Item 1 -->
+									<div class="item active">
+										<div class="cover-container">
+											<img src="src/assets/img/certificacion Mexico-001.jpg" class="img-responsive" style="height:550px;" alt=""  />
+										</div>
+									</div>
+									<!-- Item 2-->
+									<div class="item">
+										<div class="cover-container">
+											<img src="src/assets/img/Matricula.jpg" class="img-responsive" alt="" style="width:400px; height:550px;" />
+										</div>
+									</div>
+									<!--Item 3-->
+									<div class="item">
+										<div class="cover-container">
+											<img src="src/assets/img/Matricula 2.jpg" class="img-responsive" style="width:400px; height:550px;" alt="" />
+										</div>
+									</div>
+									<!--Item 4-->
+									<div class="item">
+										<div class="cover-container">
+											<img src="src/assets/img/tituloSueyinFront.jpg" class="img-responsive" style="width:400px; height:550px;" alt="" />
+										</div>
+									</div>
+									<!--Item 5-->
+									<div class="item">
+										<div class="cover-container">
+											<img src="src/assets/img/tituloSueyinBack.jpg" class="img-responsive" style="width:400px; height:550px;" alt="" />
+										</div>
+									</div>
+									<!--Item 6-->
+									<div class="item">
+										<div class="cover-container">
+											<img src="src/assets/img/certificacionInfonavit.jpg" class="img-responsive" style="width:400px; height:550px;" alt="" />
+										</div>
+									</div>
+
+									<a class="carousel-control-prev" href="#carouselCompany" role="button" data-slide="prev" style="position:absolute;margin-top:-25%; z-index:1000; left:2%; font-size:50px; float:left; color:black;">
+										<i class="fa fa-angle-left" style="font-size:70px;"></i>
+									</a>
+									<a class="carousel-control-next" href="#carouselCompany" role="button" data-slide="next" style="position:absolute;margin-top:-25%; z-index:1000; right:2%; font-size:50px; float:left;color:black;">
+										<i class="fa fa-angle-right" style="font-size:70px;"></i>
+									</a>
+								</div>
+							</div>
+						</div>						
+					</div><!-- END COL -->
+					<br>
+					<br>
+					<div align="center" id="ampi-logo">
+						<img src="src/assets/img/LOGO AMPI.JPG" alt="A.M.P.I.">
+					</div>
+				</div><!-- END ROW -->
+			</div><!-- END CONTAINER -->
+		</section>
+		<!-- END ABOUT US  -->
+
+  </main>
+</template>
+<style>
+	#ampi-logo{
+		
+	}
+	#ampi-logo img{
+		margin-top:50px; 
+		border-radius: 9px;
+		width: 100px;
+	}
+</style>

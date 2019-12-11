@@ -1,0 +1,17 @@
+@import '../bootstrap/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900,300|Montserrat:400,700');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import '../owlcarousel/css/owl.carousel.css';
+@import '../owlcarousel/css/owl.theme.css';
+
+@import './prettyPhoto.css';
+
+@import './animate.css';
+
+@import './style.css';
+
+@import './responsive.css';
+

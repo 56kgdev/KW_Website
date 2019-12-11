@@ -1,0 +1,60 @@
+{
+  "name": "rento-house",
+  "description": "torreon",
+  "version": "1.0.0",
+  "author": "Jair Enrique Gomez Rodriguez <jairgomez_rodriguez@hotmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "material-design-icons-iconfont": "^4.0.3",
+    "npm": "^6.13.3",
+    "numeral": "^2.0.6",
+    "thumbnail-slider": "^0.1.3",
+    "v-money": "^0.8.1",
+    "vue": "^2.5.21",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-carousel": "^0.6.15",
+    "vue-head": "^2.1.0",
+    "vue-paginate": "^3.6.0",
+    "vue-paginatron": "^0.2.2",
+    "vue-plain-pagination": "^0.2.1",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.2",
+    "vue-server-renderer": "^2.5.17",
+    "vue-slick": "^1.1.15",
+    "vuejs-paginate": "^2.1.0",
+    "vuetify": "^1.3.15"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "coffeescript": "^2.3.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "file-loader": "^1.1.11",
+    "sass-resources-loader": "^1.3.5",
+    "vue-loader": "^13.7.3",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^3.12.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^2.11.5"
+  }
+}
