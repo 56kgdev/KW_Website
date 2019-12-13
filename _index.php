@@ -22,7 +22,7 @@
         $data=getMetaData($field);
         $unique=TRUE;
       }else{
-        $field= 'company=137';
+        $field= 'company=128';//************************************************************** */
         $data=getMetaData($field);
         $unique=FALSE;
       }

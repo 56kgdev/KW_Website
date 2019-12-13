@@ -1,4 +1,4 @@
-var idCompany='246';
+var idCompany='128';//************************************************************** */
 const config = {
   companyId:idCompany,
   /*Url's para propiedades

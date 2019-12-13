@@ -129,6 +129,7 @@
     <link rel="canonical" href="<?php echo $enlace_actual; ?>"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
+    <!--*************************************************************************-->
     <meta name="viewport"           content="width=device-width, initial-scale=1">
     <link rel="next"                href="https://ihomecancun.com/nosotros/"/>
     <link rel="next"                href="https://ihomecancun.com/contacto"/>

@@ -1,38 +1,28 @@
-<template>        
-    <div>    
-        <!-- START HOME -->    
-        <div id="props-carousel" class="carousel slide" data-ride="carousel">
-    
-             <!--BEGIN WRAPPER FOR SLIDES    -->
-            <div class="carousel-inner">
-                <div v-for="(n,i) in sliderInfo" :index="i" :property="n" :key="n.propertyid" :style="'background-image:url('+sliderInfo[i].largephoto+');height:100%'" class="item image-slider-contain" :class=" {'active':(i==0)}">    
-                <!--<img :src="sliderInfo[i].largephoto" :alt="sliderInfo[i].nameproperty">-->
-                    <div class="carousel-caption">    
-                        <div class="carousel-shade">    
-                            <div id="nameProperty" class="caption sfr slider-title" style="cursor:pointer;" @click="goToProperty(sliderInfo[i].propertyid, sliderInfo[i].nameproperty)">{{ sliderInfo[i].nameproperty }}</div>    
-                            <div id="infoProperty" class="caption sfl slider-subtitle">{{ sliderInfo[i].neighbourhood }}, {{ sliderInfo[i].city }}</div> <br>
-                            <a id="buttonProperty" style="cursor:pointer;" @click="goToProperty(sliderInfo[i].propertyid, sliderInfo[i].nameproperty)" class="caption sfb btn btn-default btn-lg" data-x="75" data-y="260" data-speed="800" data-easing="easeOutBack" data-start="1600"    
-                                data-end="9800" data-endspeed="500" data-endeasing="easeInSine">Leer Mas</a>    
-                        </div>            
-                    </div>    
-                </div>    
-            </div>
-            <!-- END WRAPPER FOR SLIDES -->
+<template>  
+    <div> 
 
-            <!-- BEGIN LEFT AND RIGHT CONTROLS -->    
-            <a class="left carousel-control" role="button" href="#props-carousel" data-slide="prev">    
-                <span class="icon-prev"><i aria-hidden="true" class="fa fa-angle-left"></i></span>    
-                <span class="sr-only">Previous</span>        
-            </a>
-    
-            <a class="right carousel-control" role="button" href="#props-carousel" data-slide="next">    
-                <span class="icon-next"><i aria-hidden="true" class="fa fa-angle-right"></i></span>    
-                <span class="sr-only">Next</span>                    
-            </a>   
+       
+        <!--CAROUSEL PRUEBA-->
+        <div>
+            <swiper :options="swiperOption">
+                <div class="parallax-bg" slot="parallax-bg" data-swiper-parallax="-23%"></div>
 
-             <!-- BEGIN LEFT AND RIGHT CONTROLS -->
+                <swiper-slide v-for="(n,i) in sliderInfo" :index="i" :property="n" :key="n.propertyid" >
+                    <div class="title" data-swiper-parallax="-100">{{n.name_desarrollo_spa}}</div>
+                    <br>
+                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                    <div class="text" data-swiper-parallax="-300">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                    </div>
+                </swiper-slide>
+                
+            </swiper>
         </div>
-        <!-- END  HOME DESIGN -->
+        
+        <!--CAROUSEL PRUEBA-->
+
+
+
 
         <!-- BEGIN SEARCH -->    
         <ip-search-form @select="setPropertiesFound" align="center"></ip-search-form>             
@@ -78,20 +68,21 @@
     import IpDestcProp from '@/components/PropertyDestc.vue'    
     import RlLoader from '@/components/shared/Loader.vue'    
     import IpSearch from '@/components/Search.vue'    
-    import IpSearchForm from '@/components/SearchForm.vue'    
-    import {
-    
-        Carousel,
-    
-        Slide
-    
-    } from 'vue-carousel';
-    
+    import IpSearchForm from '@/components/SearchForm.vue';
+    import {Carousel,Slide} from 'vue-carousel';
+
+    import 'swiper/dist/css/swiper.css'
+
+    import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
     export default {
     
         name: 'app',
     
         components: {
+            swiper,
+            
+            swiperSlide,
     
             IpSlide,
     
@@ -113,7 +104,20 @@
     
         data() {
     
-            return {    
+            return {
+                swiperOption: {
+                    speed: 600,
+                    parallax: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+          }
+        },
+               
                 sliderInfo: [],    
                 sliderLargephotoFirst: '',    
                 sliderCityFirst: '',    
@@ -142,7 +146,8 @@
         created() {    
             this.isLoading = false    
             immoService.getSliderHome()    
-                .then(res => {            
+                .then(res => {  
+                    console.log(res);          
                     const sliderInfo = res    
                     this.sliderInfo = sliderInfo    
                     this.sliderLargephotoFirst = sliderInfo.largephoto    
@@ -207,7 +212,47 @@
 </script>
 
 <style>
-    .image-slider-contain{
+
+    .swiper-slide {
+    font-size: 18px;
+    color:#fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    background-color: transparent!important;
+    justify-content: space-around!important;
+  }
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://backgrounddownload.com/wp-content/uploads/2018/09/star-wars-star-background-4.jpg);
+  }
+  .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+  }
+  .swiper-slide .subtitle {
+    font-size: 21px;
+  }
+  .swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .image-slider-contain{
         background-position-x: center;
         background-position-y: center;
         background-size: contain;
