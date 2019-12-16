@@ -1,48 +1,34 @@
 <template>  
     <div> 
-
-       
-        <!--CAROUSEL PRUEBA-->
-        <div>
-            <swiper :options="swiperOption">
-                <div class="parallax-bg" slot="parallax-bg" data-swiper-parallax="-23%"></div>
-
-                <swiper-slide v-for="(n,i) in sliderInfo" :index="i" :property="n" :key="n.propertyid" >
-                    <div class="title" data-swiper-parallax="-100">{{n.name_desarrollo_spa}}</div>
-                    <br>
-                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                    <div class="text" data-swiper-parallax="-300">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                    </div>
-                </swiper-slide>
-                
-            </swiper>
-        </div>
-        
+        <!--CAROUSEL PRUEBA MD CARDS-->
+         <md-card>
+            <md-card-media  style="height: 500px">
+                <swiper :options="swiperOptionTop" class="gallery-top" data-swiper-parallax="-23%">
+                    <swiper-slide v-for="(n,i) in sliderInfo" :index="i" :property="n" :key="n.propertyid" :style="'background-image:url('+n.largephoto+');'">
+                        <div class="title" data-swiper-parallax="-100">{{n.name_desarrollo_spa}}</div>
+                    </swiper-slide>
+                    <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+                    <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+                </swiper>
+            </md-card-media>
+        </md-card>
         <!--CAROUSEL PRUEBA-->
 
-
-
-
-        <!-- BEGIN SEARCH -->    
+        <!-- BEGIN SEARCH -->   
         <ip-search-form @select="setPropertiesFound" align="center"></ip-search-form>             
         <!-- END SEARCH-->  
-
-
         <div class="row">
             <div class="col-md-1"></div>
             <div class="post-content offset-col-3 col-md-10" align="center">
                 <p class="quote">
-                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit,  </span>
-                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
                 </p>
             </div>
         </div>                             
-    
         <!-- START PROPERTY LIST -->    
         <section>
             <!--- BEGIN CONTAINER -->    
-            <div class="container">    
+              
                 <!--- BEGIN ROW -->
                 <div class="row">    
                     <div class="section-title text-center wow zoomIn">    
@@ -53,11 +39,11 @@
                     </div>            
                 </div>    
                 <!--- END ROW -->    
-            </div>    
+               
             <!--- END CONTAINER -->    
-        </section>    
+        </section>  
+               
         <!-- END  PROPERTY LIST -->
-    
     </div>
 </template>
 
@@ -70,7 +56,6 @@
     import IpSearch from '@/components/Search.vue'    
     import IpSearchForm from '@/components/SearchForm.vue';
     import {Carousel,Slide} from 'vue-carousel';
-
     import 'swiper/dist/css/swiper.css'
 
     import { swiper, swiperSlide } from 'vue-awesome-swiper'
@@ -105,19 +90,26 @@
         data() {
     
             return {
-                swiperOption: {
-                    speed: 600,
+                swiperOptionTop: {
+                    speed: 700,
                     parallax: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
-                    },
+                    spaceBetween: 10,
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'
-          }
-        },
-               
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        loop: true
+                    },
+                    },
+                    /*swiperOptionThumbs: {
+                        spaceBetween: 10,
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        touchRatio: 0.2,
+                        slideToClickedSlide: true
+                    },*/
                 sliderInfo: [],    
                 sliderLargephotoFirst: '',    
                 sliderCityFirst: '',    
@@ -142,7 +134,16 @@
             }
     
         },
-    
+        /*/
+         mounted() {
+            this.$nextTick(() => {
+                const swiperTop = this.$refs.swiperTop.swiper
+                const swiperThumbs = this.$refs.swiperThumbs.swiper
+                swiperTop.controller.control = swiperThumbs
+                swiperThumbs.controller.control = swiperTop
+            })
+            },
+        /*/
         created() {    
             this.isLoading = false    
             immoService.getSliderHome()    
@@ -212,268 +213,29 @@
 </script>
 
 <style>
-
-    .swiper-slide {
-    font-size: 18px;
+/** */
+.swiper-container {
+    background-color: #000;
+  }
+.swiper-slide {
+    background-size: contain;
+    background-position: center;
+}
+  .gallery-top {
+    height: 100%!important;
+    width: 100%;   
+  }
+  .swiper-slide .title {
     color:#fff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 40px 60px;
-    background-color: transparent!important;
     justify-content: space-around!important;
-  }
-  .parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://backgrounddownload.com/wp-content/uploads/2018/09/star-wars-star-background-4.jpg);
-  }
-  .swiper-slide .title {
-    font-size: 41px;
+    font-size: 40px !important;
+    line-height: 2!important;
     font-weight: 300;
   }
-  .swiper-slide .subtitle {
-    font-size: 21px;
-  }
-  .swiper-slide .text {
-    font-size: 14px;
-    max-width: 400px;
-    line-height: 1.3;
-  }
-  
-  
-  
-  
-  
-  
-  
-  .image-slider-contain{
-        background-position-x: center;
-        background-position-y: center;
-        background-size: contain;
 
-    }
-    @media (max-width: 768px) {
-    
-        .btn-responsive {
-    
-            padding: 2px 4px;
-    
-            font-size: 80%;
-    
-            line-height: 1;
-    
-            border-radius: 3px;
-    
-        }
-        .carousel-caption {            
-            top: 15% ;       
-            width: 85%; 
-        }
-        .carousel-inner>.item>img{
-            height: 75vh;
-        }
-        .carousel-inner {
-            height: 70vh !important; 
-        }
-    }
-    @media (min-width: 769px) {
-    
-        .btn-responsive {
-    
-            padding: 4px 9px;
-    
-            font-size: 90%;
-    
-            line-height: 1.2;
-    
-        }
-        
-    
-    }
-    .carousel-caption {
-    
-        width: 70%;
-    
-        text-align: left;
-    
-        top: 25% ;
-    
-        left: 10% !important;
-    
-        bottom: inherit;
-    
-    }
-    .carousel-shade {
-    
-        background-color: transparent;
-    
-        border-top: 1px solid transparent;
-    
-        border-bottom: 1px solid transparent;
-    
-    }     
-    .carousel-caption h3 {
-    
-        padding: 0;
-    
-        margin: 0;
-    
-        font-size: 3vw;
-    
-        border-bottom: 1px solid white;
-    
-    }         
-    .carousel-caption p {
-    
-        font-size: 1.1vw;
-    
-    }
-    .caption-slide1 button {
-    
-        background-color: #4a5677;
-    
-        white-space: normal;
-    
-        margin-top: 1vw;
-    
-    }
-    .carousel-control {
-    
-        width: 0;
-    
-    }
-    .carousel-control .icon-prev,
-    
-    .carousel-control .icon-next {
-    
-        background-color: rgba(0, 0, 0, 0.5);
-    
-        color: white;
-    
-        margin-top: -50px;
-    
-        font-size: 24px;
-    
-        height: 50px;
-    
-        width: 50px;
-    
-        line-height: 50px;
-    
-        text-align: center;
-    
-        border-radius: 4px;
-    
-    }
-    .carousel-control .icon-prev:hover,
-    
-    .carousel-control .icon-next:hover {
-    
-        background-color: #4a5677;
-    
-    }
-    .carousel-control .icon-prev {
-    
-        left: 10px;
-    
-        margin-left: 0;
-    
-    }
-    .carousel-control .icon-next {
-    
-        right: 10px;
-    
-        margin-right: 0;
-    
-    }
-    .carousel-control .icon-prev:before,
-    
-    .carousel-control .icon-next:before {
-    
-        content: '';
-    
-    }
-    .carousel-control.left,
-    
-    .carousel-control.right {
-    
-        background-image: none;
-    
-        filter: none;
-    
-    }
-    .carousel-shade a {
-    
-        color: #4a5677;
-        font-weight: 900;
-        border-color: #4a5677;
-    
-    }
-    #nameProperty {
-    
-        animation-duration: 3.5s;
-    
-        animation-name: slidein;
-    
-    }
-    #infoProperty {
-    
-        animation-duration: 1.5s;
-    
-        animation-name: slidein;
-    
-    }
-    #buttonProperty {
-    
-        float: right;
-    
-        animation-duration: 2.5s;
-    
-        animation-name: slidein1;
-    
-    }
-    @keyframes slidein {
-    
-        from {
-    
-            margin-left: 100%;
-    
-            width: 100%
-    
-        }
-    
-        to {
-    
-            margin-left: 0%;
-    
-            width: 100%;
-    
-        }
-    
-    }    
-    @keyframes slidein1 {
-    
-        from {
-    
-            margin-left: 100%;
-    
-            width: auto;
-    
-        }
-    
-        to {
-    
-            margin-left: 0%;
-    
-            width: auto;
-    
-        }
-    
-    }
+/**/
+  
 </style>
