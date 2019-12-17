@@ -1,17 +1,9 @@
 <template>  
     <div> 
         <!--CAROUSEL PRUEBA MD CARDS-->
-         <md-card>
-            <md-card-media  style="height: 500px">
-                <swiper :options="swiperOptionTop" class="gallery-top" data-swiper-parallax="-23%">
-                    <swiper-slide v-for="(n,i) in sliderInfo" :index="i" :property="n" :key="n.propertyid" :style="'background-image:url('+n.largephoto+');'">
-                        <div class="title" data-swiper-parallax="-100">{{n.name_desarrollo_spa}}</div>
-                    </swiper-slide>
-                    <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
-                    <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
-                </swiper>
-            </md-card-media>
-        </md-card>
+         <div id="carousel">
+             
+         </div>
         <!--CAROUSEL PRUEBA-->
 
         <!-- BEGIN SEARCH -->   
@@ -103,13 +95,6 @@
                         loop: true
                     },
                     },
-                    /*swiperOptionThumbs: {
-                        spaceBetween: 10,
-                        centeredSlides: true,
-                        slidesPerView: 'auto',
-                        touchRatio: 0.2,
-                        slideToClickedSlide: true
-                    },*/
                 sliderInfo: [],    
                 sliderLargephotoFirst: '',    
                 sliderCityFirst: '',    
@@ -213,7 +198,7 @@
 </script>
 
 <style>
-/** */
+
 .swiper-container {
     background-color: #000;
   }
@@ -236,6 +221,6 @@
     font-weight: 300;
   }
 
-/**/
+
   
 </style>
